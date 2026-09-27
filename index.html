@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>William Kapinga | SilentWolf — Web Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>William Kapinga <span class="alias">— SilentWolf</span></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#learning-plan">Learning Plan</a>
+      <a href="#photos">Photos</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about" class="content-section">
+      <h2>About me</h2>
+      <p>I am a Cyber Security student at Mulungushi University, studying under the alias
+        SilentWolf. My goal is to become a top-tier security researcher and developer,
+        combining offensive and defensive skills with strong software engineering
+        fundamentals. This portfolio is where I practice everything I'm learning in
+        ICT251. From semantic HTML5 structure to writing clean, secure front-end code.</p>
+    </section>
+
+    <section id="hobbies" class="content-section">
+      <h2>My hobbies</h2>
+      <ul>
+        <li>Hobby 1: Listening to Music</li>
+        <li>Hobby 2: Watching Movies</li>
+        <li>Hobby 3: Programming</li>
+      </ul>
+    </section>
+
+    <section id="learning-plan" class="content-section">
+      <h2>My learning plan</h2>
+
+      <ol>
+        <li>Practice CSS layout (Flexbox and Grid) with small daily exercises</li>
+        <li>Build and deploy one small secure project every week</li>
+        <li>Study the OWASP Top 10 and apply it to every project I build</li>
+      </ol>
+
+      <table>
+        <caption>Weekly web learning plan</caption>
+        <thead>
+          <tr><th>Day</th><th>Topic</th><th>Practice task</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Monday</td><td>HTML5 semantics</td><td>Rebuild this page's structure from memory</td></tr>
+          <tr><td>Wednesday</td><td>CSS box model</td><td>Style a card layout using only padding/margin/border</td></tr>
+          <tr><td>Friday</td><td>Web security basics</td><td>Spot one input-validation risk in a sample form</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="photos" class="content-section">
+      <h2>My photos</h2>
+      <div class="gallery">
+        <figure>
+          <img src="images/photo1.jpg" alt="Casual outdoor portrait">
+          <figcaption>Silent moves in the shade, building the future in stealth mode</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo2.jpg" alt="Good light, good mood">
+          <figcaption>734 mindset: Hope, Faith, and New Beginnings</figcaption>
+        </figure>
+        <figure>
+          <img src="images/photo3.jpg" alt="A leather jacket and red jersey">
+          <figcaption>Cyber Security by focus, fresh by choice</figcaption>
+        </figure>
+        </figure>
+      </div>
+    </section>
+
+    <section id="media" class="content-section">
+      <h2>My media</h2>
+
+      <h3>Introduction video</h3>
+      <video controls src="videos/intro.mp4"></video>
+      <p>Transcript: Silence isn't absence, it's strategy! Hi, my name is William Kapinga and in the tech world, I'm known as the Silent Wolf. I'm quiet by nature. An introvert who's always felt more at home behind a screen than in a room of people. Because of that, people tend to assume that I'm soft and easy to overlook. But wolves don't hunt by being loud. They're patient, silent and precise, and that's the exact mindset behind the name. Quiet on the surface, sharp and capable on the underneath. I'm a cyber security student at Mulungushi University, working towards becoming a top-tier security researcher and developer eho understands systems well enough to both break them and defend them. I'm currently working on my CSS, specifically Flexbox and Grid, for this course. Thank you for watching.
+      </p>
+
+      <h3>Audio clip</h3>
+      <audio controls src="audios/voice.mp3"></audio>
+      <p>A little more about me.</p>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact Me</h2>
+      <p class="form-note">This form is a browser demonstration only. It does not send data anywhere.</p>
+      <form action="#">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option value="general">General</option>
+          <option value="collab">Collaboration</option>
+          <option value="feedback">Feedback</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 William Kapinga — SilentWolf. Built for ICT251 Web Technologies.</p>
+  </footer>
+
+</body>
+</html>

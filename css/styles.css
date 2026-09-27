@@ -1,0 +1,146 @@
+/* ===== Palette =====
+   background : #12161C
+   panel      : #1B212B
+   border     : #2A3240
+   text       : #E7EAEE
+   muted text : #8A94A6
+   accent     : #3FA9A0
+*/
+
+body {
+  margin: 0;
+  background-color: #12161C;
+  color: #E7EAEE;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Element selector: every heading gets the monospace treatment */
+h1, h2, h3 {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  color: #E7EAEE;
+}
+
+header {
+  background-color: #1B212B;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid #3FA9A0;
+}
+
+header h1 { margin: 0 0 0.75rem 0; font-size: 1.6rem; }
+header .alias { color: #3FA9A0; font-weight: normal; }
+
+nav a {
+  display: inline-block;
+  color: #8A94A6;
+  text-decoration: none;
+  margin-right: 1.25rem;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+/* Visible hover/focus state, required by Part D.3 */
+nav a:hover, nav a:focus {
+  color: #3FA9A0;
+  border-bottom-color: #3FA9A0;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Class selector, reused across every section:
+   this is the deliberate box-model demo — padding, margin, border */
+.content-section {
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid #2A3240;
+  background-color: #1B212B;
+}
+
+/* ID selector for one unique section, per Part D.2 */
+#hobbies {
+  background-color: #202838;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+caption { text-align: left; color: #8A94A6; margin-bottom: 0.5rem; }
+
+th, td {
+  border: 1px solid #2A3240;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th { background-color: #202838; }
+
+.gallery figure {
+  display: inline-block;
+  width: 30%;
+  margin: 0 1.5% 1rem 0;
+  vertical-align: top;
+}
+
+/* Required by Part D.3 — images/video scale, no horizontal overflow */
+img, video {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #2A3240;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: #8A94A6;
+  margin-top: 0.35rem;
+}
+
+form { margin-top: 1rem; }
+
+form label {
+  display: block;
+  margin-top: 0.75rem;
+  color: #8A94A6;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  background-color: #12161C;
+  border: 1px solid #2A3240;
+  color: #E7EAEE;
+  box-sizing: border-box; /* keeps padding from pushing fields past 100% width */
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  outline: none;
+  border-color: #3FA9A0;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.6rem 1.25rem;
+  background-color: #3FA9A0;
+  color: #12161C;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover, button[type="submit"]:focus {
+  background-color: #56C2B8;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #8A94A6;
+  font-size: 0.85rem;
+}
