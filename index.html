@@ -1,129 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>William Kapinga | SilentWolf — Web Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="William Kapinga, a Mulungushi University cyber security student learning web technologies.">
+  <meta name="theme-color" content="#101311">
+  <title>William Kapinga | Web Technologies Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <header>
-    <h1>William Kapinga <span class="alias">— SilentWolf</span></h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#hobbies">Hobbies</a>
-      <a href="#learning-plan">Learning Plan</a>
-      <a href="#photos">Photos</a>
-      <a href="#media">Media</a>
-      <a href="#contact">Contact</a>
-      <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">WK</span><span>William Kapinga <span class="brand-alias">/ SilentWolf</span></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#hobbies">Hobbies</a><a href="#learning-plan">Learning</a><a href="#photos">Photos</a><a href="#media">Media</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
-
-  <main>
-
-    <section id="about" class="content-section">
-      <h2>About me</h2>
-      <p>I am a Cyber Security student at Mulungushi University, studying under the alias
-        SilentWolf. My goal is to become a top-tier security researcher and developer,
-        combining offensive and defensive skills with strong software engineering
-        fundamentals. This portfolio is where I practice everything I'm learning in
-        ICT251. From semantic HTML5 structure to writing clean, secure front-end code.</p>
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ICT251 · WEB TECHNOLOGIES</p>
+        <h1 id="page-title">Curious about the web. Careful about what I build.</h1>
+        <p class="hero-intro">I’m William, a Cyber Security student at Mulungushi University. This is where I share what I’m learning, the things I enjoy, and the projects I build along the way.</p>
+        <div class="hero-actions"><a class="button" href="#photos">Explore my site <span aria-hidden="true">↓</span></a><a class="text-link" href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener noreferrer">Learn web development ↗</a></div>
+      </div>
+      <aside class="hero-aside" aria-label="Current learning focus"><p class="eyebrow">CURRENT FOCUS</p><h2>Building strong foundations.</h2><ul><li>Semantic HTML</li><li>Responsive CSS</li><li>Security-minded development</li></ul><span class="aside-index">ICT251 / 2026</span></aside>
+      <span class="hero-watermark" aria-hidden="true">SW</span>
     </section>
-
-    <section id="hobbies" class="content-section">
-      <h2>My hobbies</h2>
-      <ul>
-        <li>Hobby 1: Listening to Music</li>
-        <li>Hobby 2: Watching Movies</li>
-        <li>Hobby 3: Programming</li>
-      </ul>
+    <section class="content-section split-section" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><p class="eyebrow">01 / INTRODUCTION</p><h2 id="about-title">About me</h2></div>
+      <div class="section-copy"><p>I am a Cyber Security student at Mulungushi University, and I use the alias SilentWolf. I’m interested in how websites work, how to build them well, and how to make them safer. I’m developing my web skills alongside my security studies, starting with the foundations of HTML and CSS.</p><p>This portfolio is part of that learning. I’ll use it to practise what we cover in ICT251, share projects as I complete them, and explain the ideas behind my work. My long-term goal is to become a security researcher and developer with strong software engineering skills.</p></div>
     </section>
-
-    <section id="learning-plan" class="content-section">
-      <h2>My learning plan</h2>
-
-      <ol>
-        <li>Practice CSS layout (Flexbox and Grid) with small daily exercises</li>
-        <li>Build and deploy one small secure project every week</li>
-        <li>Study the OWASP Top 10 and apply it to every project I build</li>
-      </ol>
-
-      <table>
-        <caption>Weekly web learning plan</caption>
-        <thead>
-          <tr><th>Day</th><th>Topic</th><th>Practice task</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Monday</td><td>HTML5 semantics</td><td>Rebuild this page's structure from memory</td></tr>
-          <tr><td>Wednesday</td><td>CSS box model</td><td>Style a card layout using only padding/margin/border</td></tr>
-          <tr><td>Friday</td><td>Web security basics</td><td>Spot one input-validation risk in a sample form</td></tr>
-        </tbody>
-      </table>
+    <section class="content-section split-section hobbies-section" id="hobbies" aria-labelledby="hobbies-title">
+      <div class="section-heading"><p class="eyebrow">02 / OFF SCREEN</p><h2 id="hobbies-title">Things I enjoy</h2></div>
+      <ul class="hobby-list"><li><span>01</span>Listening to music</li><li><span>02</span>Watching movies</li><li><span>03</span>Programming</li></ul>
     </section>
-
-    <section id="photos" class="content-section">
-      <h2>My photos</h2>
-      <div class="gallery">
-        <figure>
-          <img src="images/photo1.jpg" alt="Casual outdoor portrait">
-          <figcaption>Silent moves in the shade, building the future in stealth mode</figcaption>
-        </figure>
-        <figure>
-          <img src="images/photo2.jpg" alt="Good light, good mood">
-          <figcaption>734 mindset: Hope, Faith, and New Beginnings</figcaption>
-        </figure>
-        <figure>
-          <img src="images/photo3.jpg" alt="A leather jacket and red jersey">
-          <figcaption>Cyber Security by focus, fresh by choice</figcaption>
-        </figure>
-        </figure>
+    <section class="content-section split-section" id="learning-plan" aria-labelledby="learning-title">
+      <div class="section-heading"><p class="eyebrow">03 / KEEP LEARNING</p><h2 id="learning-title">My learning plan</h2></div>
+      <div class="section-copy"><p class="section-lead">I’m growing my skills through regular practice and small projects.</p>
+        <ol class="learning-list"><li>Rebuild pages from memory to practise semantic HTML and clear structure.</li><li>Use layout exercises to improve my CSS, including the box model, Flexbox, and Grid.</li><li>Build and document small projects, then review what I can improve in the next version.</li></ol>
+        <div class="table-wrap"><table><caption>A weekly web learning plan</caption><thead><tr><th scope="col">Day</th><th scope="col">Topic</th><th scope="col">Practice task</th></tr></thead><tbody><tr><th scope="row">Monday</th><td>HTML5 semantics</td><td>Rebuild a page structure from memory</td></tr><tr><th scope="row">Wednesday</th><td>CSS box model</td><td>Style a layout with margin, padding, and borders</td></tr><tr><th scope="row">Friday</th><td>Web security basics</td><td>Review a sample form for input risks</td></tr></tbody></table></div>
       </div>
     </section>
-
-    <section id="media" class="content-section">
-      <h2>My media</h2>
-
-      <h3>Introduction video</h3>
-      <video controls src="videos/intro.mp4"></video>
-      <p>Transcript: Silence isn't absence, it's strategy! Hi, my name is William Kapinga and in the tech world, I'm known as the Silent Wolf. I'm quiet by nature. An introvert who's always felt more at home behind a screen than in a room of people. Because of that, people tend to assume that I'm soft and easy to overlook. But wolves don't hunt by being loud. They're patient, silent and precise, and that's the exact mindset behind the name. Quiet on the surface, sharp and capable on the underneath. I'm a cyber security student at Mulungushi University, working towards becoming a top-tier security researcher and developer eho understands systems well enough to both break them and defend them. I'm currently working on my CSS, specifically Flexbox and Grid, for this course. Thank you for watching.
-      </p>
-
-      <h3>Audio clip</h3>
-      <audio controls src="audios/voice.mp3"></audio>
-      <p>A little more about me.</p>
+    <section class="content-section" id="photos" aria-labelledby="photos-title">
+      <div class="section-heading wide-heading"><div><p class="eyebrow">04 / A FEW MOMENTS</p><h2 id="photos-title">My photos</h2></div><p>A few pictures from my life and the person behind the screen.</p></div>
+      <div class="gallery"><figure><img src="images/photo1.jpg" alt="William outdoors in a shaded setting" loading="lazy"><figcaption><span>01</span> A quiet moment outdoors.</figcaption></figure><figure><img src="images/photo2.jpg" alt="William in natural light" loading="lazy"><figcaption><span>02</span> Hope, faith, and new beginnings.</figcaption></figure><figure><img src="images/photo3.jpg" alt="William wearing a leather jacket over a red jersey" loading="lazy"><figcaption><span>03</span> Personal style, same focus.</figcaption></figure></div>
     </section>
-
-    <section id="contact" class="content-section">
-      <h2>Contact Me</h2>
-      <p class="form-note">This form is a browser demonstration only. It does not send data anywhere.</p>
-      <form action="#">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="topic">Topic</label>
-        <select id="topic" name="topic">
-          <option value="general">General</option>
-          <option value="collab">Collaboration</option>
-          <option value="feedback">Feedback</option>
-        </select>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send message</button>
-      </form>
+    <section class="content-section" id="media" aria-labelledby="media-title">
+      <div class="section-heading wide-heading"><div><p class="eyebrow">05 / HEAR FROM ME</p><h2 id="media-title">Video & audio</h2></div><p>Short recordings introducing me and one of my interests.</p></div>
+      <div class="media-grid"><article class="media-item"><p class="eyebrow">VIDEO INTRODUCTION</p><video controls preload="metadata" src="videos/intro.mp4" aria-describedby="video-summary">Your browser does not support video playback.</video><p id="video-summary">In this short video, I introduce myself, share what I study, and talk about a web skill I hope to learn.</p></article><article class="media-item"><p class="eyebrow">AUDIO CLIP</p><audio controls preload="metadata" src="videos/voice.mp3">Your browser does not support audio playback.</audio><p>A short recording about one of my interests and why I enjoy learning new skills.</p></article></div>
     </section>
-
+    <section class="content-section split-section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-heading"><p class="eyebrow">06 / SAY HELLO</p><h2 id="contact-title">Contact me</h2><p class="form-note">This form is a browser demonstration only. It does not send or store your message.</p></div>
+      <form action="#" method="get"><div class="form-row"><div class="form-field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required></div><div class="form-field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div></div><div class="form-field"><label for="topic">Topic</label><select id="topic" name="topic"><option value="general">General</option><option value="collaboration">Collaboration</option><option value="feedback">Website feedback</option></select></div><div class="form-field"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div><button class="button" type="submit">Send message <span aria-hidden="true">↗</span></button></form>
+    </section>
   </main>
-
-  <footer>
-    <p>&copy; 2026 William Kapinga — SilentWolf. Built for ICT251 Web Technologies.</p>
-  </footer>
-
+  <footer class="site-footer"><a class="footer-brand" href="#top">William Kapinga <span>· SilentWolf</span></a><p>Built with HTML and CSS for ICT251 Web Technologies.</p><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>
