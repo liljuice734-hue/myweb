@@ -4,10 +4,14 @@ A responsive personal portfolio built with HTML, CSS, and JavaScript for ICT251 
 
 ## JavaScript features
 
-1. **Contact form validation and preview:** checks the name, email, and message; reports problems beside the relevant fields; then displays a local preview. It does not send or store messages.
+1. **Contact form validation and email draft:** checks the name, email, and message; reports problems beside the relevant fields; displays a safe local preview; and opens a prefilled email draft addressed to the site owner. The visitor reviews and sends it in their email app.
 2. **Theme switch:** switches between dark and light colour themes.
-3. **Photo gallery:** Previous and Next buttons move through the three photos and wrap at the beginning and end.
-4. **Project and skill filter:** filters three learning examples, has a reset button, and explains when there are no matches.
+3. **Photo gallery:** Previous and Next buttons move through eight captioned photos and wrap at the beginning and end.
+4. **Project and skill filter:** filters three learning examples, has a reset button, and explains when there are no matches. Each project card also opens its details.
+
+## Add a new project
+
+This is a static site, so visitors cannot upload files through the page. To add a finished work, put its files in a folder such as `projects/my-project/`, then add a project card in `index.html` and link to the work from that card's detail section. Add new photos to `images/` and add their file name, description, and caption to the `photos` array in `js/script.js`.
 
 ## Run locally
 

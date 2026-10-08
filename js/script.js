@@ -15,6 +15,16 @@ const projectCards = Array.from(document.querySelectorAll(".project-card"));
 const filterStatus = document.querySelector("#filter-status");
 const filterEmpty = document.querySelector("#filter-empty");
 
+// Let each project card expand in place and announce whether its details are open.
+projectCards.forEach((card) => {
+  card.addEventListener("toggle", () => {
+    const label = card.querySelector(".project-open-label");
+    const icon = card.querySelector(".project-open span[aria-hidden]");
+    label.textContent = card.open ? "Close project details" : "Open project details";
+    icon.textContent = card.open ? "−" : "＋";
+  });
+});
+
 function filterProjects() {
   const query = projectSearch.value.trim().toLowerCase();
   let visibleCount = 0;
@@ -44,6 +54,11 @@ const photos = [
   { src: "images/photo1.jpg", alt: "William outdoors in a shaded setting", caption: "A quiet moment outdoors." },
   { src: "images/photo2.jpg", alt: "William in natural light", caption: "Hope, faith, and new beginnings." },
   { src: "images/photo3.jpg", alt: "William wearing a leather jacket over a red jersey", caption: "Personal style, same focus." },
+  { src: "images/photo4.jpg", alt: "Three karate practitioners posing together outdoors at night", caption: "A night of focus, discipline, and good company." },
+  { src: "images/photo5.jpg", alt: "Three karate practitioners standing together after training", caption: "Different belts, one dojo, one shared commitment." },
+  { src: "images/photo6.jpg", alt: "Two martial artists facing each other on a training court", caption: "Face to face, focused, and ready to learn." },
+  { src: "images/photo7.jpg", alt: "A karate practitioner practising a high kick with a partner", caption: "Timing, balance, and control in motion." },
+  { src: "images/photo8.jpg", alt: "A smiling karate practitioner celebrating with a seated teammate", caption: "A little celebration after putting in the work." },
 ];
 let currentPhoto = 0;
 const galleryImage = document.querySelector("#gallery-image");
@@ -66,6 +81,8 @@ document.querySelector("#gallery-next").addEventListener("click", () => showPhot
 const contactForm = document.querySelector("#contact-form");
 const formFeedback = document.querySelector("#form-feedback");
 const messagePreview = document.querySelector("#message-preview");
+const emailDraftLink = document.querySelector("#email-draft-link");
+const contactEmail = "liljuiceee734@gmail.com";
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function setFieldError(field, errorElement, message) {
@@ -104,6 +121,10 @@ contactForm.addEventListener("submit", (event) => {
   document.querySelector("#preview-email").textContent = email;
   document.querySelector("#preview-topic").textContent = document.querySelector("#topic").value;
   document.querySelector("#preview-message").textContent = message;
-  formFeedback.textContent = "Your details were validated in this browser. No message was sent.";
+  const topic = document.querySelector("#topic").value;
+  const subject = `Website contact: ${topic}`;
+  const body = `Name: ${name}\nEmail: ${email}\nTopic: ${topic}\n\nMessage:\n${message}`;
+  emailDraftLink.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  formFeedback.textContent = "Your details were validated. Review the preview, then open the email draft below.";
   messagePreview.hidden = false;
 });
