@@ -109,7 +109,7 @@ html[data-theme="light"] .gallery-slide,html[data-theme="light"] .project-card {
 .empty-state { margin:1rem 0 0; padding:1rem; border-left:3px solid var(--accent); color:var(--paper); background:var(--soft); }
 .gallery-viewer { max-width:760px; margin:0 auto; }
 .gallery-slide { margin:0; padding:.65rem; border:1px solid var(--line); background:var(--soft); }
-.gallery-slide img { width:100%; max-height:620px; aspect-ratio:4/3; object-fit:cover; }
+.gallery-slide img { width:100%; height:clamp(320px,65vh,620px); object-fit:contain; object-position:center; background:#080a08; }
 .gallery-slide figcaption { padding:.85rem .4rem .25rem; font-size:.85rem; }
 .gallery-slide figcaption span { margin-right:.55rem; }
 .gallery-controls { display:flex; align-items:center; justify-content:space-between; gap:.75rem; margin-top:1rem; }
