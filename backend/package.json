@@ -1,0 +1,19 @@
+{
+  "name": "ict251-portfolio-crud",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ICT251 Activity 4: single-table portfolio CRUD",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test test/api.test.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0"
+  }
+}

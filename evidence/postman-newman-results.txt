@@ -1,0 +1,58 @@
+newman
+
+ICT251 Activity 4 - Portfolio CRUD
+
+→ 1 - GET all portfolio records
+  GET http://localhost:3000/api/portfolio [200 OK, 2.98kB, 36ms]
+  √  HTTP 200
+  √  JSON response
+  √  Response is an array
+
+→ 2 - POST create portfolio record
+  POST http://localhost:3000/api/portfolio [201 Created, 573B, 15ms]
+  √  HTTP 201
+  √  JSON response
+  √  Created title
+
+→ 3 - GET one portfolio record
+  GET http://localhost:3000/api/portfolio/13 [200 OK, 539B, 3ms]
+  √  HTTP 200
+  √  JSON response
+  √  Correct ID
+
+→ 4 - PUT update portfolio record
+  PUT http://localhost:3000/api/portfolio/13 [200 OK, 541B, 3ms]
+  √  HTTP 200
+  √  JSON response
+  √  Updated status
+
+→ 5 - DELETE portfolio record
+  DELETE http://localhost:3000/api/portfolio/13 [200 OK, 291B, 3ms]
+  √  HTTP 200
+  √  JSON response
+  √  Deletion confirmed
+
+→ 6 - GET deleted record returns 404
+  GET http://localhost:3000/api/portfolio/13 [404 Not Found, 290B, 3ms]
+  √  HTTP 404
+  √  JSON response
+
+┌─────────────────────────┬──────────────────┬──────────────────┐
+│                         │         executed │           failed │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              iterations │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│                requests │                6 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│            test-scripts │                6 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│      prerequest-scripts │                0 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              assertions │               17 │                0 │
+├─────────────────────────┴──────────────────┴──────────────────┤
+│ total run duration: 530ms                                     │
+├───────────────────────────────────────────────────────────────┤
+│ total data received: 3.7kB (approx)                           │
+├───────────────────────────────────────────────────────────────┤
+│ average response time: 10ms [min: 3ms, max: 36ms, s.d.: 12ms] │
+└───────────────────────────────────────────────────────────────┘

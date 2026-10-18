@@ -1,0 +1,12 @@
+✔ one application table, six theme fields, timestamps and ten sample records (1.7288ms)
+✔ all five CRUD endpoints return JSON and persist their changes (132.8067ms)
+✔ rejects missing fields, bad types, invalid IDs and malformed JSON (168.0292ms)
+✔ serves portfolio and CRUD page while keeping backend configuration private (83.8816ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 774.443

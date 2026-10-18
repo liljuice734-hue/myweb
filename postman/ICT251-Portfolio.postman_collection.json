@@ -1,0 +1,178 @@
+{
+  "info": {
+    "name": "ICT251 Activity 4 - Portfolio CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "recordId",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "1 - GET all portfolio records",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/portfolio",
+        "description": "GET and DELETE use no request body. POST and PUT use raw JSON."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "pm.test('JSON response', () => pm.response.to.be.json);",
+              "pm.test('Response is an array', () => pm.expect(pm.response.json()).to.be.an('array'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "2 - POST create portfolio record",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/portfolio",
+        "description": "GET and DELETE use no request body. POST and PUT use raw JSON.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"owner_name\": \"William Kapinga\",\n  \"project_title\": \"Postman demonstration\",\n  \"description\": \"Temporary record for the Activity 4 endpoint demonstration.\",\n  \"skill\": \"Node.js\",\n  \"status\": \"Planned\",\n  \"project_year\": 2026\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 201', () => pm.response.to.have.status(201));",
+              "pm.test('JSON response', () => pm.response.to.be.json);",
+              "pm.collectionVariables.set('recordId', pm.response.json().id);",
+              "pm.test('Created title', () => pm.expect(pm.response.json().project_title).to.eql('Postman demonstration'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "3 - GET one portfolio record",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/portfolio/{{recordId}}",
+        "description": "GET and DELETE use no request body. POST and PUT use raw JSON."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "pm.test('JSON response', () => pm.response.to.be.json);",
+              "pm.test('Correct ID', () => pm.expect(pm.response.json().id).to.eql(Number(pm.collectionVariables.get('recordId'))));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "4 - PUT update portfolio record",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/portfolio/{{recordId}}",
+        "description": "GET and DELETE use no request body. POST and PUT use raw JSON.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"owner_name\": \"William Kapinga\",\n  \"project_title\": \"Postman demonstration\",\n  \"description\": \"Temporary record for the Activity 4 endpoint demonstration.\",\n  \"skill\": \"Node.js\",\n  \"status\": \"Completed\",\n  \"project_year\": 2026\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "pm.test('JSON response', () => pm.response.to.be.json);",
+              "pm.test('Updated status', () => pm.expect(pm.response.json().status).to.eql('Completed'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "5 - DELETE portfolio record",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/portfolio/{{recordId}}",
+        "description": "GET and DELETE use no request body. POST and PUT use raw JSON."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+              "pm.test('JSON response', () => pm.response.to.be.json);",
+              "pm.test('Deletion confirmed', () => pm.expect(pm.response.json().message).to.eql('Portfolio record deleted.'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "6 - GET deleted record returns 404",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/portfolio/{{recordId}}",
+        "description": "GET and DELETE use no request body. POST and PUT use raw JSON."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP 404', () => pm.response.to.have.status(404));",
+              "pm.test('JSON response', () => pm.response.to.be.json);"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

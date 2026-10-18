@@ -1,0 +1,16 @@
+# This paid plan is required for a persistent SQLite disk. Review cost before creating.
+services:
+  - type: web
+    name: william-portfolio-crud
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: DB_PATH
+        value: /data/portfolio.sqlite
+      - key: CORS_ORIGIN
+        value: "*"
+    disk:
+      name: portfolio-data
+      mountPath: /data
+      sizeGB: 1

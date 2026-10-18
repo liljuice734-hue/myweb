@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "Initial ten records",
+    "Create via browser",
+    "Safe text display",
+    "Edit via GET and PUT",
+    "Reload persistence",
+    "Delete and refresh",
+    "Mobile viewport containment",
+    "Original portfolio navigation",
+    "No browser JavaScript errors"
+  ]
+}
